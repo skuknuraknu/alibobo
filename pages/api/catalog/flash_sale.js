@@ -1,4 +1,7 @@
-import conn from '../../../db'
+require('dotenv').config()
+const mysql = require('mysql2')
+// db setup ✨
+const conn = mysql.createConnection(process.env.DATABASE_URL)
 
 export default function handler( req, res) {
 	if(req.method == "GET"){
