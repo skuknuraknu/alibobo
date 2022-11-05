@@ -4,4 +4,10 @@
 
 html{
 	font-family: 'Signika Negative', sans-serif;
+	height: 100vh;
+	background-color: #F5F5F5;
+}
+pre{
+	white-space: pre-wrap;
+	font-family: 'Signika Negative', sans-serif;
 }

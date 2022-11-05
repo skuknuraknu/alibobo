@@ -14,7 +14,8 @@ module.exports = {
       'oren-login' : '#DC9B23',
       'abu-abu' : '#ECEEF0',
       'ijo-login' : '#5E8782',
-      'pink-login' : '#E795AB'
+      'pink-login' : '#E795AB',
+      'ijo-header' : '#61CFC2'
     },
        rotate: {
         '360': '360deg',

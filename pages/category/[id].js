@@ -15,7 +15,7 @@ const CategoryById = () => {
   	const categories = data?.data
   	if(!error) console.log(categories)
 	if(error) console.log(error)
-
+		
 	return (
 		<div>
 			<Link href="/" ><span className="hover:text-black duration-300 cursor-pointer absolute text-white py-4 px-4"><FaArrowLeft className="inline mb-1 peer-hover:text-black"/> Kembali</span></Link>
@@ -40,16 +40,16 @@ const CategoryById = () => {
 						)
 					}
 			</div>
-			<p className="px-4 py-2 text-lg">Menampilkan {categories != null ? categories[0]?.nama_kategori : `...`} produk dari kategori {categories != null ? categories[0]?.nama_kategori : `...`}</p>
+			<p className="px-4 py-2 text-lg pl-6">Menampilkan Kategori {categories != null ? categories[0]?.nama_kategori : `...`}</p>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-4 mb-4">
 				{
 					categories && (
 						Object.values(categories).map(kategori => {
 							return (
-								<div className="w-full h-[21rem] shadow-2xl rounded-md" key={kategori.id_produk}>
-									<img src={kategori.gambar} className="p-2 object-cover h-60 w-full rounded-md" referrerPolicy="no-referrer"></img>
-									<span className="p-1 block">{kategori.nama_produk}</span>
-									<span className="p-1 block">{kategori.harga}</span>
+								<div className="w-full h-fit pb-2 shadow-2xl rounded-md cursor-pointer" key={kategori.id_produk}>
+									<Link href={'/products/id/'+kategori.id_produk}><img src={kategori.gambar_produk} className="p-3 object-cover h-60 w-full rounded-md" referrerPolicy="no-referrer"></img></Link>
+									<span className="pl-3 block">{kategori.nama_produk}</span>
+									<span className="pl-3 block text-green-700">{kategori.harga}</span>
 								</div>
 							)
 						})

@@ -16,11 +16,16 @@
     "mysql2": "^2.3.3",
     "next": "12.3.1",
     "next-auth": "^4.13.0",
+    "qrcode-terminal": "^0.12.0",
+    "rajaongkir-nodejs": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-query": "^3.39.2",
-    "swr": "^1.3.0"
+    "react-select": "^5.5.7",
+    "react-timer-hook": "^3.0.5",
+    "swr": "^1.3.0",
+    "whatsapp-web.js": "^1.18.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
