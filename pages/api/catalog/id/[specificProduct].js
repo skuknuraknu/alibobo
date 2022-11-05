@@ -7,9 +7,9 @@ export default function handler( req, res) {
 	if(req.method == "GET"){
 		conn.query(`SELECT * FROM produk WHERE id_produk = ${id}`, (error, result) => {
 			if(error){
-				return res.json({"Error" : [error]})
+				return res.send({"Error" : [error]})
 			}
-			return res.json({
+			return res.status(200).send({
 				"data"  : result
 			})
 		})
