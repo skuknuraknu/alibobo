@@ -1,6 +1,6 @@
 require('dotenv').config()
 // db setup ✨
-export default function handler( req, res) {
+export default function handler(req, res) {
 	const mysql = require('mysql2')
 	const conn = mysql.createConnection(process.env.DATABASE_URL)
 	const id = req.query.specificProduct
