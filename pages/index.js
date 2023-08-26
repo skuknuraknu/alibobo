@@ -8,8 +8,8 @@ import Image from 'next/image';
 // import component
 
 export default function Home() {
-    
-    const router = useRouter();
+
+const router = useRouter();
     const { status } = useSession();
     useEffect(() => {
       if (status === "unauthenticated") {

@@ -9,17 +9,17 @@ const Header = () => {
 	const { status, data : session } = useSession();
 	const [ clicked, setClicked ] = useState(false)
 
-	useEffect(() => {
+useEffect(() => {
       if (status === "unauthenticated") {
         router.push("/auth/signIn");
       } else if (status === "authenticated") {
           console.log("Hoorraayyyyy")
       }
     }, [status]);
-	
+
 	return (
 	<div className="w-fit sm:w-full h-[27rem] relative ">
-		<span className="absolute bg-yellow-400 px-6 py-3 text-2xl m-5">Wangy Shop</span>
+		<span className="absolute bg-yellow-400 px-6 py-3 text-2xl m-5">Alibobo</span>
 
 			<div className="absolute text-2xl m-5 right-0">
 			<button onClick={() => setClicked(prev => !prev)} className="peer w-16 h-16 rounded-full bg-indigo-900 shadow-xl cursor-pointer relative">
